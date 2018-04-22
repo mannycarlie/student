@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <a class="navbar-brand js-scroll-trigger">
+                <img class="img-responsive" src="assets/img/blackrock_college_logo.png" alt="blackrock_college_logo">
+            </a>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2 prof">
+            <h5>{{loggedInUser.username}} ({{loggedInUser.usertype}})</h5>
+            <p class="logout" (click)="logout()">Logout</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="mySidenav" class="sidenav">
+        <ul style="margin-top: -31px;">
+            <li *ngIf="authManager.isAdmin">
+                <a [routerLink]="['register']">
+                    <h6 style="padding:10px;margin-left: 18px;">Create User</h6>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['student']">
+                    <h6 style="padding:10px;margin-left: 18px;">Student</h6>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['course']">
+                    <h6 style="padding:10px; margin-left: 18px;">Course</h6>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

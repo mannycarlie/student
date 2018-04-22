@@ -1,0 +1,65 @@
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a *ngIf="authManager.isAdmin" class="btn btn-warning" [routerLink]="['add']">Add</a>
+                        </div>
+                        <div class="col-sm-8">
+                            <h4 style="padding-top: 8px;">Courses</h4>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th *ngIf="authManager.isAdmin">Edit</th>
+                            <th *ngIf="authManager.isAdmin">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let course of courses; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{course.courseid}}</td>
+                            <td>{{course.name}}</td>
+                            <th *ngIf="authManager.isAdmin">
+                                <a class="btn btn-success" [routerLink]="['edit', course._id]">Edit</a>
+                            </th>
+                            <th *ngIf="authManager.isAdmin">
+                                <button class="btn btn-danger" (click)="open(content, course, i)">Delete</button>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Course {{selectedCourse.name}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure to delete?</p>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-default" (click)="c('Close click')">Close</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

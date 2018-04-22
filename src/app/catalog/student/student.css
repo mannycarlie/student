@@ -1,0 +1,23 @@
+.content{
+    border-radius: 5px;
+    background: #e9ecef9c;
+    -webkit-box-shadow: 5px 10px #e9ecef9c;
+    box-shadow: -2px -2px #6c757d3b;
+    border: 0.5px solid #e9ecef9c;
+}
+
+.header{
+    padding: 5px;
+}
+
+.my-form{
+    padding: 2%;
+}
+
+.student-form{
+    border: 1px solid;
+    padding: 14px;
+    background: #17a2b8;
+    color: white;
+    border-radius: 9px;
+}

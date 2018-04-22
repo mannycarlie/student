@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <form (ngSubmit)="submit(user)" class="form-signin">
+    <img src="assets/img/blackrock_college_logo.png" alt="blackrock_college_logo">
+    <h2>Login</h2>
+    <div style="border:0.5px solid white; margin-bottom:14px;"></div>
+    <div class="form-group row">
+      <label for="username" class="control-label col-md-4">User Name</label>
+      <input name="username" class="form-control col-md-8" id="username" placeholder="Username" [(ngModel)]="user.username" required>
+    </div>
+    <!-- <div class="form-group row">
+      <label for="type" class="control-label col-md-4">User Type</label>
+      <select class="form-control col-md-8" name="type" id="type" [(ngModel)]="user.type">
+        <option *ngFor="let type of user_types" [value]='type.val'>
+          {{type.name}}
+        </option>
+      </select>
+    </div> -->
+    <div class="form-group row">
+      <label for="inputPassword3" class="control-label col-md-4">Password</label>
+      <input name="password" [(ngModel)]="user.password" type="password" class="form-control col-md-8" id="inputPassword3" placeholder="Password"
+        required>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h5 style="color:#a91422eb">{{loginMessage}}</h5>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default" style="float:right" type="submit">Login</button>
+      </div>
+    </div>
+  </form>
+</div>

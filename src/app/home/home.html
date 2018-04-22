@@ -1,0 +1,89 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" (click)="goToHome()" [routerLink]="['./']">
+            <img src="assets/img/blackrock_college_logo.png" alt="blackrock_college_logo">
+        </a>
+        <div class="collapse navbar-collapse menu" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" (click)="gotoElement('about')" [routerLink]="['./']" fragment="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" (click)="gotoElement('contact')" [routerLink]="['./']" fragment="contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" [routerLink]="['/login']">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase">
+                    <strong>GMIT</strong>
+                </h1>
+                <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <h4 class="text-faded mb-5">INSTITUID TEICNEOLAIOCHTA NA GAILLIMHE-MAIGH EO</h4>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-about" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">About Us</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4" style="text-align: left;">
+                    Classbase university rankings are web rankings that indicate the importance of the global online presence of colleges and
+                    universities rather than their academic reputations. While a better online presence does not guarantee
+                    a better reputation, there is often a strong correlation between these two indicators. Online presence
+                    is a good indicator of the significance, popularity, and breadth of content provided by an institution
+                    on the web. More popular and respected institutions tend to rank higher as a result. Classbase web rankings
+                    are calculated using web services such as Alexa, Bing, and Google. These services use proprietary alghorithms
+                    to determine the importance of a specific institution's online presence, which means we have no direct
+                    influence over the rankings. Our methodology is tailored toward anyone looking for a quick overview of
+                    the academic institutions in different countries.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h1 class="pageheading">Contact Us</h1>
+        <div width="100%" style="border:0.5px solid #09325f"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                       <strong> GMIT Mayo Campus</strong><br>
+                        Westport Road <br>
+                        Castlebar <br>
+                        Co. Mayo
+                        F23 X853</p>
+
+            </div>
+            <div class="col-md-6">
+                <h2 class="pageheading">Registration</h2>
+                <p>The Registrar, Ms. Sandi Dunphy
+                    <br />
+                    <strong>Tel: </strong>+353 94 9025700
+                    <br />
+                    <strong>Fax: </strong>+353 94 9025757
+                    <br />
+                    <strong>Email: </strong>
+                    <a href="mayo@gmit.ie">mayo@gmit.ie</a>
+                    <br/>
+            </div>
+        </div>
+    </div>
+</section>

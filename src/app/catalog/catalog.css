@@ -1,0 +1,71 @@
+.jumbotron{
+    padding: 0rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #17a2b8;
+}
+
+.prof h5{
+    color:white;
+    float: right;
+}
+
+
+.logout{
+    color:white;
+    cursor: pointer;
+}
+
+.logout:hover{
+    color: #e9ecefb8;
+    font-size: 20px;
+}
+
+.menu a{
+    padding: 60px;
+    color:white;
+    text-decoration: none !important;
+}
+
+.sidenav {
+    margin-top: 4.2%;
+    height: 96%;
+    width: 8%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #17a2b8;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav ul li{
+    list-style-type:none;
+    border-bottom: 0.5px solid white;
+    margin-left: -38px;
+}
+
+.sidenav a{
+    text-decoration: none !important;
+}
+.sidenav h6{
+  color: white;
+}
+
+.main{
+    margin-top: 4.2%;
+    margin-left: 8%;
+    height: 96%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 60px;
+}
